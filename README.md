@@ -43,8 +43,7 @@
     <input type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required> I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.</label>
     </div>
 
-
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitModal">SUBMIT</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-bs-target="#submitModal">SUBMIT</button>
 
     <!-- Modal -->
     <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
