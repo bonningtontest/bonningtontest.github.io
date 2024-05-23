@@ -94,7 +94,7 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 
 function openModal(){
-      document.getElementById('confirmedName').value = "teste";
+      $('#myModal .modal-body').append("teste");
       $('#submitModal').modal('show')
 }
 </script>
