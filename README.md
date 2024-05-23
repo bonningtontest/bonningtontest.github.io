@@ -93,10 +93,20 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 
 function submitText(){
+  var ckdate = $("#CHECK-OUT").val();
+  ckdate = (date) => {
+    const year = ckdate.getFullYear();
+    const month = (ckdate.getMonth() + 1).toString().padStart(2, "0");
+    const day = ckdate.getDate().toString().padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+  }
+
+
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
                   +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
                   +"<br>Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
-                  +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
+                  +"<br>Check-Out Date: <div class='font-weight-bold'>"+ckdate + "</div>"
                   +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
 }
