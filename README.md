@@ -93,13 +93,12 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 
 function submitText(){
-  var ckdate = $("#CHECK-OUT").val();
-  ckdate = (date) => {
-    const year = ckdate.getFullYear();
-    const month = (ckdate.getMonth() + 1).toString().padStart(2, "0");
-    const day = ckdate.getDate().toString().padStart(2, "0");
+  var ckdate = ($("#CHECK-OUT").val()) => {
+    const year = $("#CHECK-OUT").val().getFullYear();
+    const month = ($("#CHECK-OUT").val().getMonth() + 1).toString().padStart(2, "0");
+    const day = $("#CHECK-OUT").val().getDate().toString().padStart(2, "0");
 
-    return `${year}-${month}-${day}`;
+    return `${day}-${month}-${year}`;
   }
 
 
