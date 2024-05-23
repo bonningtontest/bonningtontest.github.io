@@ -15,30 +15,30 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-<form action="https://api.sheetmonkey.io/form/iQMYhHKk257VGevi81mAqL" method="post" class="font-weight-bold text-uppercase">
-    <div class="form-group">
+<form action="https://api.sheetmonkey.io/form/iQMYhHKk257VGevi81mAqL" method="post" class="font-weight-bold">
+    <div class="form-group text-uppercase">
     <label for="NAME">*Your Name:</label>
     <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
     </div>
-    <div class="form-group">
+    <div class="form-group text-uppercase">
     <label for="CAR-REGISTRATION">*Car Registration / License Plate:</label>
     <input type="text" id="CAR-REGISTRATION" name="CAR-REGISTRATION" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
     </div>
-    <div class="form-group row">
+    <div class="form-group row text-uppercase">
     <label for="ROOM" class="col-sm-5">*Room Number:</label>
     <label for="CHECK-OUT" class="col-sm-6" style="margin-left:40px">*Check-Out Date:</label>
     </div>
-    <div class="form-group row">
+    <div class="form-group row text-uppercase">
     <label style="padding-left:15px"></label>
     <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
     <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
     <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
     </div>
-    <div class="form-group">
+    <div class="form-group text-uppercase">
     <label for="OBSERVATIONS">Remarks (Optional):</label>
     <input type="text" id="OBSERVATIONS" name="OBSERVATIONS" class="form-control" autocomplete="off" style="text-transform: capitalize;">
     </div>
-    <div class="form-group">    
+    <div class="form-group text-uppercase">    
     <label for="CONFIRMED" style="word-wrap:break-word">
     <input type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required> I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.</label>
     </div>
