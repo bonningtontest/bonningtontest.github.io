@@ -44,8 +44,31 @@
     </div>
 
 
-    <button type="submit" class="btn btn-primary btn-lg btn-block">SUBMIT</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submitModal">SUBMIT</button>
 
+    <!-- Modal -->
+    <div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="submitModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="submitModalLabel">Please confirm the car registration.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p id="confirmName"></p>
+            <p>Car Registration:</p>
+            <p>Room Number:</p>
+            <p>Check-Out Date:</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Make Changes</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#submitModal">Confirm & Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </form>
 </html>
 
