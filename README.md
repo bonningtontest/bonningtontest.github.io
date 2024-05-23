@@ -57,9 +57,9 @@
           </div>
           <div class="modal-body">
             <p id="confirmName"></p>
-            <p>Car Registration: <script>print(document.getElementById('CHECK-IN').value)</script></p>
-            <p>Room Number:</p>
-            <p>Check-Out Date:</p>
+            <p>Car Registration: <script>print(document.getElementById('CAR-REGISTRATION').value)</script></p>
+            <p>Room Number: <script>print(document.getElementById('ROOM').value)</script></p>
+            <p>Check-Out Date: <script>print(document.getElementById('CHECK-OUT').value)</script></p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Make Changes</button>
