@@ -57,9 +57,9 @@
           </div>
           <div class="modal-body">
             <p id="confirmName"></p>
-            <p>Car Registration: <script>print(document.getElementById('CAR-REGISTRATION').value)</script></p>
-            <p>Room Number: <script>print(document.getElementById('ROOM').value)</script></p>
-            <p>Check-Out Date: <script>print(document.getElementById('CHECK-OUT').value)</script></p>
+            <p>Car Registration:</p>
+            <p>Room Number:</p>
+            <p>Check-Out Date:</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Make Changes</button>
@@ -90,6 +90,7 @@ var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOStri
 document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 function openModal(){
+      document.getElementById('confirmName').value = "TESTE";
       $('#submitModal').modal('show')
 }
 </script>
