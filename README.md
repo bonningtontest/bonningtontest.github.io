@@ -57,7 +57,7 @@
           </div>
           <div class="modal-body">
             <p id="confirmName"></p>
-            <p>Car Registration: <script>document.getElementById('CHECK-IN').value</script></p>
+            <p>Car Registration: <script>print(document.getElementById('CHECK-IN').value)</script></p>
             <p>Room Number:</p>
             <p>Check-Out Date:</p>
           </div>
