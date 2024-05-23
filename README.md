@@ -43,7 +43,10 @@
     <input type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required> I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.</label>
     </div>
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-bs-target="#submitModal" onclick="openModal()">SUBMIT</button>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#submitModal" onClick="submitText()"> <!-- here was an syntax error. you were calling method by uts name without () sign -->
+         SUBMIT
+    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="submitModal">
@@ -56,10 +59,6 @@
             </button>
           </div>
           <div class="modal-body">
-            <p id="confirmedName"></p>
-            <p id="confirmedCarReg">Car Registration:</p>
-            <p id="confirmedRoom">Room Number:</p>
-            <p id="confirmedCheck-Out">Check-Out Date:</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Make Changes</button>
@@ -93,8 +92,9 @@ var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOStri
 document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 
-function openModal(){
-      $('#myModal .modal-body').append("teste");
-      $('#submitModal').modal('show')
+function submitText(){
+        var html="Name: "+$("#NAME").val()
+                  +"<br>Car Registration: "+$("#CAR-REGISTRATION").val();
+        $("#bodyModal").html(html);
 }
 </script>
