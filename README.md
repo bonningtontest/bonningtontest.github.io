@@ -16,7 +16,6 @@
 
 
 <form action="https://api.sheetmonkey.io/form/iQMYhHKk257VGevi81mAqL" method="post">
-    <div class="font-weight-bold>
     <div class="form-group">
     <label for="NAME">*Your Name:</label>
     <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
@@ -48,8 +47,6 @@
     <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#submitModal" onClick="submitText()"> <!-- here was an syntax error. you were calling method by uts name without () sign -->
          SUBMIT
     </button>
-    
-    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="submitModal">
