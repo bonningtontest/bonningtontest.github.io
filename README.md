@@ -50,14 +50,14 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="submitModalLabel">Please confirm the car registration.</h5>
+            <h5 class="modal-title" id="submitModalLabel">Please confirm your information!</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
             <p id="confirmName"></p>
-            <p>Car Registration:</p>
+            <p>Car Registration: <JavaScript>echo document.getElementById('CHECK-IN').value</JavaScript></p>
             <p>Room Number:</p>
             <p>Check-Out Date:</p>
           </div>
