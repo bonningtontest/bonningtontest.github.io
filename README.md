@@ -43,7 +43,7 @@
     <input type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required> I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.</label>
     </div>
 
-    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-bs-target="#submitModal">SUBMIT</button>
+    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-bs-target="#submitModal" onclick="openModal()">SUBMIT</button>
 
     <!-- Modal -->
     <div class="modal fade" id="submitModal">
@@ -88,4 +88,8 @@ document.getElementById('CHECK-IN').value = convertToDateTimeLocalString(current
 //Minimun check-out date from 1 day ahead
 var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOString().split("T")[0];
 document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
+
+function openModal(){
+      $('#submitModal').modal('show') 
+}
 </script>
