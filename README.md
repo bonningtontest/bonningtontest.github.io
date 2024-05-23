@@ -57,7 +57,7 @@
           </div>
           <div class="modal-body">
             <p id="confirmName"></p>
-            <p>Car Registration: <JavaScript>echo document.getElementById('CHECK-IN').value</JavaScript></p>
+            <p>Car Registration: <script>document.getElementById('CHECK-IN').value</script></p>
             <p>Room Number:</p>
             <p>Check-Out Date:</p>
           </div>
@@ -90,6 +90,6 @@ var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOStri
 document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 function openModal(){
-      $('#submitModal').modal('show') 
+      $('#submitModal').modal('show')
 }
 </script>
