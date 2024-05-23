@@ -96,7 +96,7 @@ function submitText(){
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
                   +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
                   +"<br>Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
-                  +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val().getDate() + "</div>"
+                  +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
                   +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
 }
