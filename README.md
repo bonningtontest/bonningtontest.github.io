@@ -94,10 +94,10 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
 function submitText(){        
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
-                  +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
-                  +"<br>Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
-                  +"<br>Check-Out Date: <div class='font-weight-bold'><input type="date" class="form-control col-sm-6" value='"+$("#CHECK-OUT").val() + "'></div>"
-                  +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
+                  +"Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
+                  +"Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
+                  +"Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
+                  +"Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
 }
 </script>
