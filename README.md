@@ -53,7 +53,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="submitModalLabel">Please confirm your information!</h5>
+            <h4 class="modal-title" id="submitModalLabel">Please confirm your information!</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -61,7 +61,7 @@
           <div class="modal-body" id="bodyModal">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Make Changes</button>
+            <button type="button" class="btn btn-secondary btn-lg" data-dismiss="modal">Make Changes</button>
             <button type="submit" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#submitModal">Confirm & Save</button>
           </div>
         </div>
@@ -95,7 +95,7 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 function submitText(){
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
                   +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
-                  +"<br>Room Number : <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
+                  +"<br>Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
                   +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
                   +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
