@@ -18,7 +18,7 @@
 <form action="https://api.sheetmonkey.io/form/iQMYhHKk257VGevi81mAqL" method="post" class="font-weight-bold text-uppercase">
     <div class="form-group">
     <label for="NAME">*Your Name:</label>
-    <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off"  onkeyup="this.value = this.value.toUpperCase();" required>
+    <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
     </div>
     <div class="form-group">
     <label for="CAR-REGISTRATION">*Car Registration / License Plate:</label>
@@ -72,6 +72,7 @@
 </html>
 
 <script>
+
 // getFullYear, getMonth, getDate, getHours, getMinutes all return values of local time.
 const convertToDateTimeLocalString = (date) => {
   const year = date.getFullYear();
@@ -82,15 +83,18 @@ const convertToDateTimeLocalString = (date) => {
 
   return `${year}-${month}-${day}T${hours}:${minutes}`;
 }
+
 //Check-in date as today
 const currentTime = new Date();
 document.getElementById('CHECK-IN').value = convertToDateTimeLocalString(currentTime);
+
 //Minimun check-out date from 1 day ahead
 var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOString().split("T")[0];
 document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
 
+
 function openModal(){
-      document.getElementById('confirmedName').value = document.getElementById('NAME').value;
+      document.getElementById('confirmedName').value = "teste";
       $('#submitModal').modal('show')
 }
 </script>
