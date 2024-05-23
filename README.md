@@ -46,7 +46,7 @@
     <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-bs-target="#submitModal">SUBMIT</button>
 
     <!-- Modal -->
-    <div class="modal fade" id="submitModal>
+    <div class="modal fade" id="submitModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
