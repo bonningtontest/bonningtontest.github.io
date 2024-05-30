@@ -26,11 +26,11 @@
     </div>
 
     <div class="form-group">
-      <input type="radio" id="GUEST" name="GUEST" value="HOTEL GUEST" checked>
+      <input type="radio" id="GUEST" name="REASON" value="HOTEL GUEST" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
-      <input type="radio" id="CROFT" name="CROFT" value="CROFT BAR">
+      <input type="radio" id="CROFT" name="REASON" value="CROFT BAR">
       <label class="role" for="CROFT">Croft Bar</label>
-      <input type="radio" id="MCG" name="MCG" value="MCGETTIGAN'S BAR">
+      <input type="radio" id="MCG" name="REASON" value="MCGETTIGAN'S BAR">
       <label class="role" for="MCG">McGettigan's Bar</label>
     </div>
 
