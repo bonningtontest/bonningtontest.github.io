@@ -119,8 +119,9 @@ var radios = document.querySelectorAll('input[type=radio][name="bedStatus"]');
 
 function changeHandler(event) {
    if ( this.value === 'CROFT BAR' || this.value === 'MCGETTIGANS BAR') {
-      $("#GUEST-INFO").hide;
-   } else if ( this.value === 'transfer' ) {
+      $("#GUEST-INFO").hidden;
+      $("#GUEST-INFO")..addClass('hide');
+   } else {
       $("#GUEST-INFO").show;
    }  
 }
