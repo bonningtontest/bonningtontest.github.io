@@ -26,7 +26,7 @@
     </div>
 
     <div class="form-group">
-      <input type="radio" id="GUEST" name="REASON" value="HOTEL GUEST" checked>
+      <input type="radio" id="GUEST" name="REASON" value="HOTEL GUEST" onchange="reason(this.value)" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
       <input type="radio" id="CROFT" name="REASON" value="CROFT BAR">
       <label class="role" for="CROFT">Croft Bar</label>
@@ -34,7 +34,7 @@
       <label class="role" for="MCG">McGettigan's Bar</label>
     </div>
 
-    <div id="GUEST">
+    <div id="GUEST-INFO">
       <div class="form-group row">
         <label for="ROOM" class="col-sm-5">*Room Number:</label>
         <label for="CHECK-OUT" class="col-sm-6" style="margin-left:40px">*Check-Out Date:</label>
@@ -113,5 +113,10 @@ function submitText(){
                   +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
                   +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
+}
+
+function reason(var value){
+  if(value == "CROFT BAR" || value == "MCGETTIGAN'S BAR") $("GUEST-INFO").hidden;
+  else $("GUEST-INFO").show;
 }
 </script>
