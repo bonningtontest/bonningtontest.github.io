@@ -119,7 +119,7 @@ var radios = document.querySelectorAll('input[type=radio][name="bedStatus"]');
 
 function changeHandler(event) {
    if ( this.value === 'CROFT BAR' || this.value === 'MCGETTIGANS BAR') {
-      $("GUEST-INFO").hidden;
+      $("GUEST-INFO").hide;
    } else if ( this.value === 'transfer' ) {
       $("GUEST-INFO").show;
    }  
