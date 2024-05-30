@@ -17,30 +17,44 @@
 
 <form action="https://api.sheetmonkey.io/form/iQMYhHKk257VGevi81mAqL" method="post">
     <div class="form-group">
-    <label for="NAME">*Your Name:</label>
-    <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
+      <label for="NAME">*Your Name:</label>
+      <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
     </div>
     <div class="form-group">
-    <label for="CAR-REGISTRATION">*Car Registration / License Plate:</label>
-    <input type="text" id="CAR-REGISTRATION" name="CAR-REGISTRATION" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
+      <label for="CAR-REGISTRATION">*Car Registration / License Plate:</label>
+      <input type="text" id="CAR-REGISTRATION" name="CAR-REGISTRATION" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
     </div>
-    <div class="form-group row">
-    <label for="ROOM" class="col-sm-5">*Room Number:</label>
-    <label for="CHECK-OUT" class="col-sm-6" style="margin-left:40px">*Check-Out Date:</label>
-    </div>
-    <div class="form-group row">
-    <label style="padding-left:15px"></label>
-    <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
-    <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
-    <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
-    </div>
+
     <div class="form-group">
-    <label for="OBSERVATIONS">Remarks (Optional):</label>
-    <input type="text" id="OBSERVATIONS" name="OBSERVATIONS" class="form-control" autocomplete="off" style="text-transform: capitalize;">
+      <input type="radio" id="GUEST" name="GUEST" value="HOTEL GUEST" checked>
+      <label class="role" for="GUEST">Hotel Guest</label>
+      <input type="radio" id="CROFT" name="CROFT" value="CROFT BAR">
+      <label class="role" for="GUEST">Croft Bar</label>
+      <input type="radio" id="MCG" name="MCG" value="MCGETTIGAN'S BAR">
+      <label class="role" for="GUEST">McGettigan's Bar</label>
     </div>
+
+    <div id="GUEST">
+      <div class="form-group row">
+        <label for="ROOM" class="col-sm-5">*Room Number:</label>
+        <label for="CHECK-OUT" class="col-sm-6" style="margin-left:40px">*Check-Out Date:</label>
+      </div>
+      <div class="form-group row">
+        <label style="padding-left:15px"></label>
+        <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
+        <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
+        <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="OBSERVATIONS">Remarks (Optional):</label>
+      <input type="text" id="OBSERVATIONS" name="OBSERVATIONS" class="form-control" autocomplete="off" style="text-transform: capitalize;">
+    </div>
+
     <div>    
-    <label for="CONFIRMED" style="word-wrap:break-word">
-    <input type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required> I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.</label>
+      <label for="CONFIRMED" style="word-wrap:break-word">
+      <input type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required> I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.</label>
     </div>
 
     <!-- Button trigger modal -->
