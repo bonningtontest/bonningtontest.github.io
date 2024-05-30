@@ -26,11 +26,11 @@
     </div>
 
     <div class="form-group">
-      <input type="radio" id="GUEST" name="REASON" value="HOTEL GUEST" checked>
+      <input type="radio" id="GUEST" name="REASON" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
-      <input type="radio" id="CROFT" name="REASON" value="CROFT BAR">
+      <input type="radio" id="CROFT" name="REASON">
       <label class="role" for="CROFT">Croft Bar</label>
-      <input type="radio" id="MCG" name="REASON" value="MCGETTIGANS BAR">
+      <input type="radio" id="MCG" name="REASON">
       <label class="role" for="MCG">McGettigan's Bar</label>
     </div>
 
@@ -118,18 +118,19 @@ function submitText(){
 $(document).ready(function(){
   $("#GUEST").click(function(){
     $("#GUEST-INFO").show();
+    document.getElementById('OBSERVATIONS').value = 'HOTEL GUEST';
   });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').value = '-';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
-    document.getElementById('OBSERVATIONS').value = document.getElementsByName('REASON').value;
+    document.getElementById('OBSERVATIONS').value = 'CROFT';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').value = '-';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
-    document.getElementById('OBSERVATIONS').value = document.getElementsByName('REASON').value;
+    document.getElementById('OBSERVATIONS').value = ''MCGETTIGANS;
   });
 });
 </script>
