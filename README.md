@@ -29,9 +29,9 @@
       <input type="radio" id="GUEST" name="GUEST" value="HOTEL GUEST" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
       <input type="radio" id="CROFT" name="CROFT" value="CROFT BAR">
-      <label class="role" for="GUEST">Croft Bar</label>
+      <label class="role" for="CROFT">Croft Bar</label>
       <input type="radio" id="MCG" name="MCG" value="MCGETTIGAN'S BAR">
-      <label class="role" for="GUEST">McGettigan's Bar</label>
+      <label class="role" for="MCG">McGettigan's Bar</label>
     </div>
 
     <div id="GUEST">
