@@ -130,7 +130,7 @@ $(document).ready(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').value = '-';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
-    document.getElementById('OBSERVATIONS').value = ''MCGETTIGANS;
+    document.getElementById('OBSERVATIONS').value = 'MCGETTIGANS';
   });
 });
 </script>
