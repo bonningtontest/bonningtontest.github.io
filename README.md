@@ -41,7 +41,7 @@
       </div>
       <div class="form-group row">
         <label style="padding-left:15px"></label>
-        <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
+        <input type="number" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
         <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
         <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
       </div>
@@ -122,13 +122,13 @@ $(document).ready(function(){
   });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('ROOM').value = '-';
+    document.getElementById('ROOM').value = '0';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
     document.getElementById('OBSERVATIONS').value = 'Croft Bar';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('ROOM').value = '-';
+    document.getElementById('ROOM').value = '0';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
     document.getElementById('OBSERVATIONS').value = "McGettigan's";
   });
