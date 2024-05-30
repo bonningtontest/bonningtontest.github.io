@@ -116,11 +116,18 @@ function submitText(){
 }
 
 $(document).ready(function(){
+  $("#GUEST").click(function(){
+    $("#GUEST-INFO").show();
+  });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
+    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
+    document.getElementById('ROOM').value = '-';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
+    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
+    document.getElementById('ROOM').value = '-';
   });
 });
 </script>
