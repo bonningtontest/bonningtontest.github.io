@@ -31,7 +31,7 @@
       <input type="radio" id="CROFT" name="REASON">
       <label class="role" for="CROFT">Croft Bar</label>
       <input type="radio" id="MCG" name="REASON">
-      <label class="role" for="MCG">McGettigan's Bar</label>
+      <label class="role" for="MCG">McGettigan's</label>
     </div>
 
     <div id="GUEST-INFO">
@@ -118,19 +118,19 @@ function submitText(){
 $(document).ready(function(){
   $("#GUEST").click(function(){
     $("#GUEST-INFO").show();
-    document.getElementById('OBSERVATIONS').value = 'HOTEL GUEST';
+    document.getElementById('OBSERVATIONS').value = 'Hotel Guest';
   });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').value = '-';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
-    document.getElementById('OBSERVATIONS').value = 'CROFT';
+    document.getElementById('OBSERVATIONS').value = 'Croft Bar';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').value = '-';
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
-    document.getElementById('OBSERVATIONS').value = 'MCGETTIGANS';
+    document.getElementById('OBSERVATIONS').value = "McGettigan's";
   });
 });
 </script>
