@@ -99,7 +99,8 @@ const convertToDateTimeLocalString = (date) => {
 
 //Check-in date as today
 const currentTime = new Date();
-document.getElementById('CHECK-IN').value = convertToDateTimeLocalString(currentTime);
+const today = convertToDateTimeLocalString(currentTime);
+document.getElementById('CHECK-IN').value = today;
 
 //Minimun check-out date from 1 day ahead
 var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOString().split("T")[0];
@@ -124,13 +125,13 @@ $(document).ready(function(){
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').removeAttr('required');
-    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
+    document.getElementById('CHECK-OUT').value = today;
     document.getElementById('OBSERVATIONS').value = 'Croft Bar';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').removeAttr('required');
-    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
+    document.getElementById('CHECK-OUT').value = today;
     document.getElementById('OBSERVATIONS').value = "McGettigan's";
   });
 });
