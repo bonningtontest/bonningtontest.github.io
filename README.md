@@ -41,7 +41,7 @@
       </div>
       <div class="form-group row">
         <label style="padding-left:15px"></label>
-        <input type="number" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
+        <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
         <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
         <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
       </div>
@@ -97,10 +97,6 @@ const convertToDateTimeLocalString = (date) => {
   return `${year}-${month}-${day}T${hours}:${minutes}`;
 }
 
-//Check-in date as today
-const currentTime = new Date();
-document.getElementById('CHECK-IN').value = convertToDateTimeLocalString(currentTime);
-
 //Minimun check-out date from 1 day ahead
 var minDate = new Date(currentTime.setDate(currentTime.getDate() + 1)).toISOString().split("T")[0];
 document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
@@ -116,19 +112,23 @@ function submitText(){
 }
 
 $(document).ready(function(){
+  //Check-in date as today
+  const currentTime = new Date();
+  document.getElementById('CHECK-IN').value = convertToDateTimeLocalString(currentTime);
+
   $("#GUEST").click(function(){
     $("#GUEST-INFO").show();
     document.getElementById('OBSERVATIONS').value = 'Hotel Guest';
   });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('ROOM').value = '0';
+    document.getElementById('ROOM').removeAttr('required');
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
     document.getElementById('OBSERVATIONS').value = 'Croft Bar';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('ROOM').value = '0';
+    document.getElementById('ROOM').removeAttr('required');
     document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
     document.getElementById('OBSERVATIONS').value = "McGettigan's";
   });
