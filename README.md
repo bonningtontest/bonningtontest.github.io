@@ -26,11 +26,11 @@
     </div>
 
     <div class="form-group">
-      <input type="radio" id="GUEST" name="REASON" value="HOTEL GUEST" onchange="reason(this.value)" checked>
+      <input type="radio" id="GUEST" name="REASON" value="HOTEL GUEST" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
       <input type="radio" id="CROFT" name="REASON" value="CROFT BAR">
       <label class="role" for="CROFT">Croft Bar</label>
-      <input type="radio" id="MCG" name="REASON" value="MCGETTIGAN'S BAR">
+      <input type="radio" id="MCG" name="REASON" value="MCGETTIGANS BAR">
       <label class="role" for="MCG">McGettigan's Bar</label>
     </div>
 
@@ -115,8 +115,17 @@ function submitText(){
         $("#bodyModal").html(html);
 }
 
-function reason(var value){
-  if(value == "CROFT BAR" || value == "MCGETTIGAN'S BAR") $("GUEST-INFO").hidden;
-  else $("GUEST-INFO").show;
+var radios = document.querySelectorAll('input[type=radio][name="bedStatus"]');
+
+function changeHandler(event) {
+   if ( this.value === 'CROFT BAR' || this.value === 'MCGETTIGANS BAR') {
+      $("GUEST-INFO").hidden;
+   } else if ( this.value === 'transfer' ) {
+      $("GUEST-INFO").show;
+   }  
 }
+
+Array.prototype.forEach.call(radios, function(radio) {
+   radio.addEventListener('change', changeHandler);
+});
 </script>
