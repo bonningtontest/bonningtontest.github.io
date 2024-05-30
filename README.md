@@ -121,13 +121,15 @@ $(document).ready(function(){
   });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
     document.getElementById('ROOM').value = '-';
+    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
+    document.getElementById('OBSERVATIONS').value = document.getElementsByName('REASON').value;
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
     document.getElementById('ROOM').value = '-';
+    document.getElementById('CHECK-OUT').value = convertToDateTimeLocalString(currentTime);
+    document.getElementById('OBSERVATIONS').value = document.getElementsByName('REASON').value;
   });
 });
 </script>
