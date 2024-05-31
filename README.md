@@ -52,10 +52,12 @@
         <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
         <div class="invalid-feedback">
           You must provide your room number if you are a hotel guest.
+        </div>
         <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
         <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
         <div class="invalid-feedback">
           You must provide your check out date if you are a hotel guest.
+        </div>
       </div>
     </div>
 
