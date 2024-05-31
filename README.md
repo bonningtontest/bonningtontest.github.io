@@ -92,7 +92,7 @@
 
 //add info to modal
 function submitText(){     
-  var obs = document.getElementsByName('REASON').value;   
+  var obs = $('REASON').val();
 
   if(obs === 'guest') {
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
@@ -112,7 +112,7 @@ function submitText(){
 
 //removes input reason from being sent
 $("form").submit(function() {
-   $(this).children('#REASON').remove();
+   $(this).children('REASON').remove();
 });
 
 //JavaScript for disabling form submissions if there are invalid fields
