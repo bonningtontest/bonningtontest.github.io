@@ -112,7 +112,7 @@ function submitText(){
 
 //removes input reason from being sent
 $("form").submit(function() {
-   $(input[name='REASON']').remove();
+   $(this).children('REASON').remove();
 });
 
 //JavaScript for disabling form submissions if there are invalid fields
