@@ -30,13 +30,13 @@
     <div class="form-group row g-2">
       <input type="radio" id="GUEST" name="REASON" value="guest" style="margin-left:15px" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
-      <input type="radio" id="CROFT" name="REASON" value="croft" style="margin-left:15px">
+      <input type="radio" id="CROFT" name="REASON" value="croft">
       <label class="role" for="CROFT">Croft Bar</label>
     </div>
     <div class="form-group row g-2">
       <input type="radio" id="MCG" name="REASON" value="mcg" style="margin-left:15px" >
       <label class="role" for="MCG">McGettigan's</label>
-      <input type="radio" id="FUNCTION" name="REASON" value="function" style="margin-left:15px">
+      <input type="radio" id="FUNCTION" name="REASON" value="function">
       <label class="role" for="FUNCTION">Function Event</label>
     </div>
 
