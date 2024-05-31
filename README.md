@@ -28,11 +28,11 @@
     </div>
 
     <div class="form-group">
-      <input type="radio" id="GUEST" name="REASON" checked>
+      <input type="radio" id="GUEST" name="REASON" value="guest" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
-      <input type="radio" id="CROFT" name="REASON">
+      <input type="radio" id="CROFT" name="REASON" value="croft">
       <label class="role" for="CROFT">Croft Bar</label>
-      <input type="radio" id="MCG" name="REASON">
+      <input type="radio" id="MCG" name="REASON" value="mcg">
       <label class="role" for="MCG">McGettigan's</label>
     </div>
 
@@ -91,13 +91,23 @@
 <script>
 
 //add info to modal
-function submitText(){        
+function submitText(){     
+  var obs = document.getElementsByName('REASON').value;   
+
+  if(obs === 'guest') {
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
                   +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
                   +"<br>Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
                   +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
                   +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
+  }
+  else {
+    var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
+              +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
+              +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
+    $("#bodyModal").html(html);
+  }
 }
 
 //removes input reason from being sent

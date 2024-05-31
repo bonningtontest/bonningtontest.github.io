@@ -1,9 +1,11 @@
 $(document).ready(function(){
 
+//set observations as hotel guest by default
+document.getElementById('OBSERVATIONS').value = 'Hotel Guest';
+
 //Check-in date as today
 const currentTime = new Date();
 const today = convertToDateTimeLocalString(currentTime);
-
 document.getElementById('CHECK-IN').value = today;
 
 //Minimun check-out date from 1 day ahead
