@@ -28,15 +28,15 @@
     </div>
 
     <div class="form-group row">
-      <input class="col-md-1" type="radio" id="GUEST" name="REASON" value="guest" style="margin-left:15px" checked>
+      <input type="radio" id="GUEST" name="REASON" value="guest" style="margin-left:15px" checked>
       <label class="role col-md-5" for="GUEST">Hotel Guest</label>
-      <input class="col-md-1" type="radio" id="CROFT" name="REASON" value="croft">
+      <input type="radio" id="CROFT" name="REASON" value="croft">
       <label class="role col-md-5" for="CROFT">Croft Bar</label>
     </div>
     <div class="form-group row">
-      <input class="col-md-1" type="radio" id="MCG" name="REASON" value="mcg" style="margin-left:15px" >
+      <input type="radio" id="MCG" name="REASON" value="mcg" style="margin-left:15px" >
       <label class="role col-md-5" for="MCG">McGettigan's</label>
-      <input class="col-md-1" type="radio" id="FUNCTION" name="REASON" value="function">
+      <input type="radio" id="FUNCTION" name="REASON" value="function">
       <label class="role col-md-5" for="FUNCTION">Function Event</label>
     </div>
 
