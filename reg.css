@@ -30,8 +30,9 @@
       }
 
       .role {
-          margin-right: 40px;
+          margin-right: 42px;
           margin-left: 20px;
+          font-weight: normal;
       }
 
       .checkbox label {
