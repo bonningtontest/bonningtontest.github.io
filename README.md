@@ -27,7 +27,7 @@
       <input type="text" id="CAR-REGISTRATION" name="CAR-REGISTRATION" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group row">
       <input type="radio" id="GUEST" name="REASON" value="guest" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
       <input type="radio" id="CROFT" name="REASON" value="croft">
