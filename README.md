@@ -34,6 +34,8 @@
       <label class="role" for="CROFT">Croft Bar</label>
       <input type="radio" id="MCG" name="REASON" value="mcg">
       <label class="role" for="MCG">McGettigan's</label>
+      <input type="radio" id="FUNCTION" name="REASON" value="function">
+      <label class="role" for="FUNCTION">Function Event</label>
     </div>
 
     <div id="GUEST-INFO">
