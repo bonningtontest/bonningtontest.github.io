@@ -92,28 +92,26 @@
 
 //add info to modal
 function submitText(){     
-  var obs = $("input[name='REASON']").val();
-
-  if(obs === 'guest') {
+  jQuery("input[name='REASON']").each(function() {
+  console.log( this.value + ":" + this.checked );
+    if(this.checked){
+      if(this.value === 'guest'){
         var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
                   +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
                   +"<br>Room Number: <div class='font-weight-bold'>"+$("#ROOM").val() + "</div>"
                   +"<br>Check-Out Date: <div class='font-weight-bold'>"+$("#CHECK-OUT").val() + "</div>"
                   +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
         $("#bodyModal").html(html);
-  }
-  else {
-    var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
-              +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
-              +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
-    $("#bodyModal").html(html);
-  }
+      }
+      else{
+        var html="Name: <div class='font-weight-bold'>"+$("#NAME").val() + "</div>"
+                  +"<br>Car Registration: <div class='font-weight-bold'>"+$("#CAR-REGISTRATION").val() + "</div>"
+                  +"<br>Remarks: <div class='font-weight-bold'>"+$("#OBSERVATIONS").val() + "</div>";
+        $("#bodyModal").html(html);
+      }
+    }
+  });
 }
-
-//removes input reason from being sent
-$("form").submit(function() {
-   $("input[name='REASON']").remove();
-});
 
 //JavaScript for disabling form submissions if there are invalid fields
 (function () {

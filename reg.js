@@ -19,13 +19,13 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').required = false;
-    document.getElementById('CHECK-OUT').value = today;
+    document.getElementById('CHECK-OUT').value = minDate;
     document.getElementById('OBSERVATIONS').value = 'Croft Bar';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
     document.getElementById('ROOM').required = false;
-    document.getElementById('CHECK-OUT').value = today;
+    document.getElementById('CHECK-OUT').value = minDate;
     document.getElementById('OBSERVATIONS').value = "McGettigan's";
   });
 });
