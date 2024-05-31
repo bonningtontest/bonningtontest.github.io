@@ -28,7 +28,7 @@
     </div>
 
     <div class="form-group row">
-      <input type="radio" id="GUEST" name="REASON" value="guest" checked>
+      <input type="radio" id="GUEST" name="REASON" value="guest" style="margin-left:15px" checked>
       <label class="role" for="GUEST">Hotel Guest</label>
       <input type="radio" id="CROFT" name="REASON" value="croft">
       <label class="role" for="CROFT">Croft Bar</label>
