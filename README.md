@@ -124,13 +124,13 @@ $(document).ready(function(){
   });
   $("#CROFT").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('ROOM').removeAttr('required');
+    document.getElementById('ROOM').required = false;
     document.getElementById('CHECK-OUT').value = today;
     document.getElementById('OBSERVATIONS').value = 'Croft Bar';
   });
   $("#MCG").click(function(){
     $("#GUEST-INFO").hide();
-    document.getElementById('ROOM').removeAttr('required');
+    document.getElementById('ROOM').required = false;
     document.getElementById('CHECK-OUT').value = today;
     document.getElementById('OBSERVATIONS').value = "McGettigan's";
   });
