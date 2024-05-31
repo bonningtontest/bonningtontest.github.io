@@ -21,16 +21,10 @@
     <div class="form-group">
       <label for="NAME">*Your Name:</label>
       <input type="text" id="NAME" name="NAME" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
-      <div class="invalid-feedback">
-        You must provide your name.
-      </div>
     </div>
     <div class="form-group">
       <label for="CAR-REGISTRATION">*Car Registration / License Plate:</label>
       <input type="text" id="CAR-REGISTRATION" name="CAR-REGISTRATION" class="form-control" autocomplete="off" onkeyup="this.value = this.value.toUpperCase();" required>
-      <div class="invalid-feedback">
-        You must provide your car registration.
-      </div>
     </div>
 
     <div class="form-group">
@@ -50,14 +44,8 @@
       <div class="form-group row">
         <label style="padding-left:15px"></label>
         <input type="number" min="80" max="5118" id="ROOM" name="ROOM" class="form-control col-sm-5" autocomplete="off" required>
-        <div class="invalid-feedback">
-          You must provide your room number if you are a hotel guest.
-        </div>
         <input type="datetime-local" id="CHECK-IN" name="CHECK-IN" class="form-control" autocomplete="off" required hidden>
         <input type="date" id="CHECK-OUT" name="CHECK-OUT" class="form-control col-sm-6" style="margin-left:30px" autocomplete="off" required>
-        <div class="invalid-feedback">
-          You must provide your check out date if you are a hotel guest.
-        </div>
       </div>
     </div>
 
@@ -71,9 +59,6 @@
       <label class="form-check-label" for="CONFIRMED" style="word-wrap:break-word">
         I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.
       </label>
-      <div class="invalid-feedback">
-        You must agree before submitting.
-      </div>
     </div>
 
     <!-- Button trigger modal -->
