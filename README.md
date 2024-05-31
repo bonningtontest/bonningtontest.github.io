@@ -54,9 +54,9 @@
       <input type="text" id="OBSERVATIONS" name="OBSERVATIONS" class="form-control" autocomplete="off" style="text-transform: capitalize;">
     </div>
 
-    <div class="form-group">          
+    <div class="form-group checkboxStyle">          
+      <input class="form-check-input" type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required>
       <label class="form-check-label" for="CONFIRMED" style="word-wrap:break-word">
-        <input class="form-check-input" type="checkbox" id="CONFIRMED" name="CONFIRMED" value="Yes" required>
         I confirm that the vehicle registration information provided above is accurate and true to the best of my knowledge. I understand that any inaccuracies may result in unauthorized parking and will lead to my vehicle being clamped.
       </label>
     </div>
