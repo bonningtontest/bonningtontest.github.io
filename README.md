@@ -102,5 +102,9 @@ function submitText(){
         $("#bodyModal").html(html);
 }
 
+//removes input reason from being sent
+$("form").submit(function() {
+   $(this).children('#REASON').remove();
+});
 
 </script>
