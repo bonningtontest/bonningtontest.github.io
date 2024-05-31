@@ -35,7 +35,7 @@
     </div>
     <div class="form-group row g-2">
       <input type="radio" id="MCG" name="REASON" value="mcg" style="margin-left:15px" >
-      <label class="role4" for="MCG">McGettigan's</label>
+      <label class="role" for="MCG">McGettigan's</label>
       <input type="radio" id="FUNCTION" name="REASON" value="function" style="margin-left:15px">
       <label class="role" for="FUNCTION">Function Event</label>
     </div>
