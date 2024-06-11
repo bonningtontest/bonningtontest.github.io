@@ -35,7 +35,7 @@ document.getElementsByName("CHECK-OUT")[0].setAttribute('min', minDate);
     document.getElementById('ROOM').required = false;
     document.getElementById('CHECK-OUT').value = minDate;
     document.getElementById('OBSERVATIONS').required = true;
-    document.getElementById('OBSERVATIONS').value = "Event / Meeting";
+    document.getElementById('OBSERVATIONS').value = "Event | Meeting | ";
   });
 });
 
