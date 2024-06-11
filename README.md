@@ -37,7 +37,7 @@
       <input type="radio" id="MCG" name="REASON" value="mcg" style="margin-left:15px" >
       <label class="role" for="MCG">McGettigan's</label>
       <input type="radio" id="OTHER" name="REASON" value="other">
-      <label class="role" for="OTHER">Other</label>
+      <label class="role" for="OTHER">Other Reason</label>
     </div>
 
     <div id="GUEST-INFO">
