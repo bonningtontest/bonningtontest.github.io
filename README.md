@@ -28,7 +28,7 @@
       // Check if dateTimeParts array has at least 1 element
       if (dateTimeParts.length > 0) {
         // First element is the date part in YYYY-MM-DD format
-        const datePart = dateTimeParts[0];
+        const datePart = dateTimeParts[1];
 
         // Update the input field with the date
         document.getElementById('CHECK-OUT').value = datePart;
