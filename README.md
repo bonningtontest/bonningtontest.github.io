@@ -20,6 +20,7 @@
       // Process the received data and update your tablet UI
       document.getElementById('NAME').value =  message.name;
       document.getElementById('ROOM').value = message.room;
+      updateDateField(message.checkout); // Call function to update date field
 
       function updateDateField(dateTimeString) {
       // Split dateTimeString into date and time parts
@@ -36,7 +37,7 @@
           console.log(formattedDate);
 
         // Update the input field with the date
-        document.getElementById('CHECK-OUT').value = formattedDate;
+        document.getElementById('CHECK-OUT').value = datePart;
 
       } else {
         console.error('Invalid date format received from server:', dateTimeString);
