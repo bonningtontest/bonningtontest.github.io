@@ -6,23 +6,36 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="reg.css">
+
     <script>
-    const socket = new WebSocket('ws://car-reg-websocket-server.glitch.me');
+    const socket = new WebSocket('wss://car-reg-websocket-server.glitch.me');
 
     socket.onopen = function() {
       console.log('WebSocket connection established.');
-
-      // Optional: Send initial data or trigger an event to send data
-      socket.send('Requesting data...');
     };
 
     socket.onmessage = function(event) {
-      console.log('Received data from server: ', event.data);
+      console.log('Received message from server: ', event.data);
+      const message = JSON.parse(event.data);
+      // Process the received data and update your tablet UI
+      document.getElementById('NAME').textContent =  message.name;
+      document.getElementById('ROOM').textContent = message.room;
+      document.getElementById('CHECK-OUT').textContent = message.checkout;
+    };
 
-      // Update your website content or UI based on received data
-      document.getElementById('ROOM').textContent = event.data;
+    socket.onerror = function(error) {
+      console.error('WebSocket error: ', error);
+    };
+
+    socket.onclose = function(event) {
+      if (event.wasClean) {
+        console.log('Connection closed cleanly, code=${event.code}, reason=${event.reason}');
+      } else {
+        console.error('Connection died unexpectedly');
+      }
     };
   </script>
+
   </head>
 
  <!-- Optional JavaScript - jQuery first, then Popper.js, then Bootstrap JS -->
