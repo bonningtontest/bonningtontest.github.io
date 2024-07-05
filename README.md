@@ -57,6 +57,17 @@
         console.error('Connection died unexpectedly');
       }
     };
+
+    // Function to format date from DD-MM-YYYY to YYYY-MM-DD
+    function formatDate(dateString) {
+      const parts = dateString.split('-');
+      if (parts.length === 3) {
+        return '${parts[2]}-${parts[1]}-${parts[0]}';
+      } else {
+        console.error('Invalid date format:', dateString);
+        return dateString; // Return original date string if format is not as expected
+      }
+    }
   </script>
 
   </head>
