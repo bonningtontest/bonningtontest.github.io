@@ -22,13 +22,20 @@
       document.getElementById('ROOM').value = message.room;
 
       function updateDateField(dateTimeString) {
-        // Assuming dateTimeString is in format "YYYY-MM-DD HH:MM:SS"
-        const dateTimeParts = dateTimeString.split(' ');
-        const datePart = dateTimeParts[0]; // Get the date part
+      // Split dateTimeString into date and time parts
+      const dateTimeParts = dateTimeString.split(' ');
+
+      // Check if dateTimeParts array has at least 1 element
+      if (dateTimeParts.length > 0) {
+        // First element is the date part in YYYY-MM-DD format
+        const datePart = dateTimeParts[0];
 
         // Update the input field with the date
         document.getElementById('CHECK-OUT').value = datePart;
+      } else {
+        console.error('Invalid date format received from server:', dateTimeString);
       }
+    }
 
     };
 
