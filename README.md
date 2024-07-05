@@ -27,7 +27,7 @@
 
       // Check if dateTimeParts array has at least 1 element
       if (dateTimeParts.length > 0) {
-        // First element is the date part in DD-MM-YYYY format
+        // First element is the date part in DD-MM-YYYY format 
         const datePart = dateTimeParts[0];
 
         // Update the input field with the date
