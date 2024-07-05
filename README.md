@@ -37,7 +37,7 @@
           console.log(formattedDate);
 
         // Update the input field with the date
-        document.getElementById('CHECK-OUT').value = datePart;
+        document.getElementById('CHECK-OUT').value =  message.checkout;
 
       } else {
         console.error('Invalid date format received from server:', dateTimeString);
