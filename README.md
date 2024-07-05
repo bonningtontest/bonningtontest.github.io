@@ -31,10 +31,13 @@
         const datePart = dateTimeParts[0];
 
         // Convert datePart to YYYY-MM-DD format
-        const formattedDate = formatDate(datePart); 
+        const formattedDate = formatDate(datePart);
+          console.log(datePart);
+          console.log(formattedDate);
 
         // Update the input field with the date
         document.getElementById('CHECK-OUT').value = formattedDate;
+
       } else {
         console.error('Invalid date format received from server:', dateTimeString);
       }
