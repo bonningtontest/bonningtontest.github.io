@@ -18,9 +18,9 @@
       console.log('Received message from server: ', event.data);
       const message = JSON.parse(event.data);
       // Process the received data and update your tablet UI
-      document.getElementById('NAME').textContent =  message.name;
-      document.getElementById('ROOM').textContent = message.room;
-      document.getElementById('CHECK-OUT').textContent = message.checkout;
+      document.getElementById('NAME').value =  message.name;
+      document.getElementById('ROOM').value = message.room;
+      document.getElementById('CHECK-OUT').value = message.checkout;
     };
 
     socket.onerror = function(error) {
